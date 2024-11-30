@@ -1,0 +1,71 @@
+﻿/* General Body Styling */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+/* Header Styling */
+#header {
+    display: flex; /* Use flexbox to align logo and text horizontally */
+    align-items: center; /* Vertically center the items */
+    background-color: #34495e;
+    color: white;
+    padding: 10px 20px;
+    height: 200px; /* Set height for the header */
+}
+
+.logo {
+    height: 100%; /* Make the logo's height equal to the header height */
+    width: auto; /* Maintain aspect ratio */
+    margin-right: 20px; /* Space between logo and text */
+}
+
+.header-text {
+    text-align: center; /* Center the text */
+    flex-grow: 1; /* Allow text to take remaining space */
+}
+
+.title {
+    font-size: 32px; /* Title font size */
+    margin: 0; /* Remove default margin */
+    text-align: center;
+}
+
+.description {
+    font-size: 16px; /* Description font size */
+    margin: 0; /* Remove default margin */
+}
+
+/* Footer Styling */
+#footer {
+    background-color: #34495e;
+    color: white;
+    padding: 10px;
+    text-align: center;
+}
+
+/* Tablet View (Medium Screen) */
+@media (max-width: 768px) {
+    #header {
+        padding: 15px;
+    }
+
+    .content {
+        padding: 15px;
+    }
+}
+
+/* Mobile View (Small Screen) */
+@media (max-width: 480px) {
+    #header {
+        font-size: 18px;
+    }
+
+    .content {
+        padding: 10px;
+    }
+
+    #footer {
+        font-size: 14px;
+    }
+}

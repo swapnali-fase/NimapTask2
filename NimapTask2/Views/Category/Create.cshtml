@@ -1,0 +1,118 @@
+﻿@model NimapTask2.Models.Category
+@{
+    Layout = null;
+}
+
+
+
+<link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+@*
+    <h2>Create Category</h2>
+
+    @using (Html.BeginForm("Create", "Category", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(model => model.CName, "Category Name")
+            @Html.TextBoxFor(model => model.CName, new { @class = "form-control" })
+        </div>
+        <button type="submit" class="btn btn-success">Create</button>
+    } *@
+<div class="form-container">
+    <h2>Create Category</h2>
+
+    @using (Html.BeginForm("Create", "Category", FormMethod.Post))
+    {
+        <div class="form-group">
+            @Html.LabelFor(model => model.CName, "Category Name")
+            @Html.TextBoxFor(model => model.CName, new { @class = "form-control" })
+        </div>
+
+        <button type="submit" class="btn btn-success">Add</button><br /><br />
+        @Html.ActionLink("Go To Home", "Home", "Product", null, new { @class = "btn btn-primary" })
+    }
+</div>
+<style>
+    /* Body and overall page styling */
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(to right, #9b4dca, #f06292, #f44336);
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        margin: 0;
+    }
+
+    /* Form container styling */
+    .form-container {
+        background-color: #ffffff;
+        border-radius: 10px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        width: 100%;
+        max-width: 480px;
+    }
+
+    /* Form heading */
+    .form-container h2 {
+        font-size: 2rem;
+        font-weight: 600;
+        text-align: center;
+        color: #333;
+        margin-bottom: 30px;
+    }
+
+    /* Form group styling */
+    .form-group {
+        margin-bottom: 20px;
+    }
+
+    .form-group label {
+        font-size: 1rem;
+        color: #555;
+        display: block;
+        margin-bottom: 8px;
+    }
+
+    .form-group input {
+        width: 100%;
+        padding: 14px;
+        font-size: 1rem;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+        background-color: #f9f9f9;
+        transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .form-group input:focus {
+        border-color: #9b4dca;
+        outline: none;
+        box-shadow: 0 0 8px rgba(155, 77, 202, 0.4);
+    }
+
+    /* Button styling */
+    .btn {
+        width: 100%;
+        padding: 14px;
+        background-color: #9b4dca;
+        color: #fff;
+        border: none;
+        border-radius: 8px;
+        font-size: 1.1rem;
+        font-weight: bold;
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        background-color: #7c3e8e;
+    }
+
+    .btn:focus {
+        outline: none;
+        box-shadow: 0 0 8px rgba(155, 77, 202, 0.4);
+    }
+
+    /* Mobile view - responsiveness */
+   
+</style>
